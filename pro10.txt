@@ -1,0 +1,93 @@
+10a public class MidString {
+
+	public static void main(String[] args) {
+		
+		String s;
+		int length, mid;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter string");
+		s = sc.nextLine();
+		length = s.length();
+		mid = length/2;
+		
+		if(length%2 != 0)
+			System.out.println("The middle character is "+s.charAt(mid));
+		else
+			System.out.println("The middle characters are "+s.charAt(mid-1)+" "+s.charAt(mid));
+		
+		sc.close();
+		}
+
+}
+10b
+public class Palindrome {
+	
+	public static void main(String[] args)
+	{
+		String original, reverse = "";
+		int length;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter string");
+		original = sc.nextLine();		
+		length = original.length();
+		
+		for(int i =  length-1; i>=0; i--) {
+			reverse = reverse + original.charAt(i);
+		}
+			if (original.equals(reverse))
+				System.out.println("Entered string is a palindrome.");
+			else
+				System.out.println("Entered string is not a palindrome.");
+	sc.close();
+	}
+
+}
+		
+10 c 
+import java.util.Scanner;
+
+public class CountVowels {
+
+	public static void main(String[] args) {
+		String s;
+		int count = 0;
+		char ch;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter string");
+		s = sc.nextLine();
+		
+		for(int i = 0; i<s.length(); i ++)
+		{
+			ch = s.charAt(i);
+
+			if(ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' || 
+			ch == 'I' || ch == 'o' || ch == 'O' || ch == 'u' || ch == 'U')
+				
+			count ++;
+		}
+		
+		System.out.println("The number of vowels: "+count);
+		sc.close();
+	}
+
+}
+
+10d 
+
+public class CountCharacter    
+{    
+    public static void main(String[] args) {    
+        String string = "Hello World";    
+        int count = 0;    
+            
+           for(int i = 0; i < string.length(); i++) {    
+            if(string.charAt(i) != ' ')    
+                count++;    
+        }    
+            
+          System.out.println("Total number of characters in a string: " + count);
+    }    
+}     
